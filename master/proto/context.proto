@@ -1,0 +1,19 @@
+syntax = "proto3";
+package kea;
+
+
+message ContextMsg {
+    enum RequestType {
+        Discover = 0;
+        Request  = 1;
+        Release = 2;
+        Decline = 3;
+        ConflictIP = 4;
+    }
+    RequestType requestType = 1;
+	uint32 subnetID = 2;
+	bytes clientID = 3;
+	bytes mac = 4;
+	uint32 requestAddr = 5;
+	string hostName = 6;
+}

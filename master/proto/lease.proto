@@ -1,0 +1,9 @@
+syntax = "proto3";
+package kea;
+
+
+message LeaseResult {
+    bool succeed = 1;
+	uint32 addr = 2;
+	uint32 subnetID = 3;
+}
